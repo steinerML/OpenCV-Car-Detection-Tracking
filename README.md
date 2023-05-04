@@ -76,3 +76,9 @@ roi = frame[340:720,500:800]
 #Apply the mask to ROI
 object_detector.apply(roi)
 ```
+```python
+#Object tracking 
+```
+```python
+
+```
