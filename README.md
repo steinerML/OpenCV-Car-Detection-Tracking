@@ -16,7 +16,7 @@ These are - in a nutshell - the main bullet points that have been approached:
 ![Source Image Sequence](general.gif)
 
 ## Contents :
-Object detection and tracking has numerous applications in computer vision, thus I wanted to summarize the main challenges we face when approaching a detection and tracking app in the following table. As we give solutions to challenges via built-in functions, I have only included the main functions used and a brief description of what it does.
+Object detection and tracking has numerous applications in computer vision, thus I wanted to summarize the main challenges we face when approaching a detection and tracking app in the following table. As we give solutions to challenges via built-in functions, I have only included the main functions used and a brief description of what each one does.
 
 | Function        |Action                                                                        |
 |----------------:|------------------------------------------------------------------------------|
@@ -61,12 +61,10 @@ object_detector = cv2.createBackgroundSubtractorMOG2()
 cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=10)
 ```
 ```python
-# Thresholding with threshold value set 127 
-th, dst = cv2.threshold(src,127,255, cv2.THRESH_BINARY); 
-cv2.imwrite("opencv-thresh-binary.jpg", dst); 
+# Find contours of the objects in the mask
+cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 ```
 ```python
-# Thresholding using THRESH_BINARY_INV 
-th, dst = cv2.threshold(src,127,255, cv2.THRESH_BINARY_INV); 
-cv2.imwrite("opencv-thresh-binary-inv.jpg", dst); 
+# Calculate area delimited by the contours (so we can impose a conditional later)
+cv2.drawContours(roi,[cnt], -1, (0,255,0), 2)
 ```
