@@ -41,21 +41,24 @@ I have used traffic_algo_github.mp4 that can be found in the repository.
 
 ## Issues:
 Several issues around the detection and tracking algorithm can be spotted if we take a closer look at some of the screenshots provided.
-Issues related with camera instability, lighting granularity, shade inconsistency and
+Most of the issues are related with:
+
++ Camera Instability.
++ Lighting Granularity.
++ Shade Inconsistency.
++ Poor Colour Thresholding.
 
 ![Source Image Sequence](source_3.jpg)
 
 ## Summary:
 
 ```python
-# Basic threhold example 
-th, dst = cv2.threshold(src, 0, 255, cv2.THRESH_BINARY); 
-cv2.imwrite("opencv-threshold-example.jpg", dst); 
+# Create object detector
+object_detector = cv2.createBackgroundSubtractorMOG2()
 ```
 ```python
-# Thresholding with maxValue set to 128
-th, dst = cv2.threshold(src, 0, 128, cv2.THRESH_BINARY); 
-cv2.imwrite("opencv-thresh-binary-maxval.jpg", dst); 
+# Create object detector (improved with parameters)
+cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=10)
 ```
 ```python
 # Thresholding with threshold value set 127 
