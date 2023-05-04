@@ -10,7 +10,7 @@ These are - in a nutshell - the main bullet points that have been approached:
 + **Mask Thresholding (254-255)**
 + **Creation of ROI (Region of Interest)**
 + **Apply Mask to ROI**
-+ **Detect objects **
++ **Detect Objects in ROI**
 + **Inverted Threshold to Zero**
 
 ![Source Image Sequence](general.gif)
@@ -32,6 +32,10 @@ I have used traffic_algo_github.mp4 that can be found in the repository.
 
 ![Source Image Sequence](source_1.jpg)
 ![Source Image Sequence](source_2.jpg)![Source Image Sequence](source_3.jpg)
+
+## Region of Interest (ROI):
+
+## Mask:
 
 ## Summary:
 
