@@ -53,7 +53,7 @@ Most of the issues are related with:
 ## Summary:
 
 ```python
-# Create object detector
+# Create object detector via a mask
 object_detector = cv2.createBackgroundSubtractorMOG2()
 ```
 ```python
@@ -67,4 +67,12 @@ cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 ```python
 # Calculate area delimited by the contours (so we can impose a conditional later)
 cv2.drawContours(roi,[cnt], -1, (0,255,0), 2)
+```
+```python
+# Define Region of Interest (ROI)
+roi = frame[340:720,500:800]
+```
+```python
+#Apply the mask to ROI
+object_detector.apply(roi)
 ```
