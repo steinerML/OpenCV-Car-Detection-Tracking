@@ -34,9 +34,11 @@ I have used traffic_algo_github.mp4 that can be found in the repository.
 ![Source Image Sequence](source_2.jpg)![Source Image Sequence](source_3.jpg)
 
 ## Region of Interest (ROI):
+![Source Image Sequence](roi_1.jpg) ![Source Image Sequence](roi_2.jpg)
+
 
 ## Mask:
-
+![Source Image Sequence](mask_1.jpg) ![Source Image Sequence](mask_2.jpg)
 ## Summary:
 
 ```python
