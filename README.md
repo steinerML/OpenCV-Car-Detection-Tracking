@@ -3,14 +3,16 @@ Object Detection and Tracking using OpenCV.
 
 In this short app I have applied the basic principles of object detection and tracking using OpenCV.
 
-These are - in a nutshell - the main bullet points that have been approache:
+These are - in a nutshell - the main bullet points that have been approached:
 
-+ Global Thresholding
-+ Binary Thresholding
-+ Inverse-Binary Thresholding
-+ Truncate Thresholding
-+ Threshold to Zero
-+ Inverted Threshold to Zero
++ **Global Thresholding**
++ **Binary Thresholding**
++ **Inverse-Binary Thresholding**
++ **Truncate Thresholding**
++ **Threshold to Zero**
++ **Inverted Threshold to Zero**
+
+![Source Image Sequence](general.gif)
 
 ## Contents :
 Object detection and tracking has numerous applications in computer vision, thus I wanted to summarize the main challenges we face when approaching a detection and tracking app in the following table. As we give solutions to challenges via built-in functions, I have only included the main functions used and a brief description of what it does.
@@ -25,16 +27,10 @@ Object detection and tracking has numerous applications in computer vision, thus
 |**cv2.THRESH_TOZERO_INV**|Inverted Threshold to Zero|
 
 ## Test Image used: 
-I have used threshold.png that can be found in the repository.
+I have used traffic_algo_github.mp4 that can be found in the repository.
 
-![Source Image Sequence](threshold.png)
-![Source Image Sequence](global-threshold.jpg)
-![Source Image Sequence](binary-trunc-threshold.jpg)
-![Source Image Sequence](binary-tozero-threshold.jpg)
-![Source Image Sequence](binary-tozero-inv-threshold.jpg)
-![Source Image Sequence](binary-maxval128-threshold.jpg)
-![Source Image Sequence](binary-maxval-threshold.jpg)
-![Source Image Sequence](binary-inv-threshold.jpg)
+![Source Image Sequence](source_1.jpg)
+![Source Image Sequence](source_2.jpg)![Source Image Sequence](source_3.jpg)
 
 ## Summary:
 
