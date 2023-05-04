@@ -5,11 +5,12 @@ In this short app I have applied the basic principles of object detection and tr
 
 These are - in a nutshell - the main bullet points that have been approached:
 
++ **Object Detector creation**
 + **Mask creation**
 + **Mask Thresholding (254-255)**
-+ **Inverse-Binary Thresholding**
-+ **Truncate Thresholding**
-+ **Threshold to Zero**
++ **Creation of ROI (Region of Interest)**
++ **Apply Mask to ROI**
++ **Detect objects **
 + **Inverted Threshold to Zero**
 
 ![Source Image Sequence](general.gif)
