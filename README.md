@@ -30,15 +30,21 @@ Object detection and tracking has numerous applications in computer vision, thus
 ## Test Image used: 
 I have used traffic_algo_github.mp4 that can be found in the repository.
 
-![Source Image Sequence](source_1.jpg)
-![Source Image Sequence](source_2.jpg)![Source Image Sequence](source_3.jpg)
+![Source Image Sequence](source_1.jpg)![Source Image Sequence](source_2.jpg)
 
 ## Region of Interest (ROI):
-![Source Image Sequence](roi_1.jpg) ![Source Image Sequence](roi_2.jpg)
+![Source Image Sequence](roi_1.jpg)![Source Image Sequence](roi_2.jpg)
 
 
 ## Mask:
-![Source Image Sequence](mask_1.jpg) ![Source Image Sequence](mask_2.jpg)
+![Source Image Sequence](mask_1.jpg)![Source Image Sequence](mask_2.jpg)
+
+## Issues:
+Several issues around the detection and tracking algorithm can be spotted if we take a closer look at some of the screenshots provided.
+Issues related with camera instability, lighting granularity, shade inconsistency and
+
+![Source Image Sequence](source_3.jpg)
+
 ## Summary:
 
 ```python
@@ -61,21 +67,3 @@ cv2.imwrite("opencv-thresh-binary.jpg", dst);
 th, dst = cv2.threshold(src,127,255, cv2.THRESH_BINARY_INV); 
 cv2.imwrite("opencv-thresh-binary-inv.jpg", dst); 
 ```
-```python
-# Thresholding using THRESH_TRUNC 
-th, dst = cv2.threshold(src,127,255, cv2.THRESH_TRUNC); 
-cv2.imwrite("opencv-thresh-trunc.jpg", dst); 
-```
-```python
-# Thresholding using THRESH_TOZERO 
-th, dst = cv2.threshold(src,127,255, cv2.THRESH_TOZERO); 
-cv2.imwrite("opencv-thresh-tozero.jpg", dst); 
-```
-```python
-# Thresholding using THRESH_TOZERO_INV 
-th, dst = cv2.threshold(src,127,255, cv2.THRESH_TOZERO_INV); 
-cv2.imwrite("opencv-thresh-to-zero-inv.jpg", dst);
-```
-
-
-
