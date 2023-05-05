@@ -21,7 +21,7 @@ Object detection and tracking has numerous applications in computer vision, thus
 | Function            |Action                                                                        |
 |:--------------------|------------------------------------------------------------------------------|
 |project.py           | Main app|
-|*Object Detection*||
+|*_Object Detection_*||
 |**cv2.VideoCapture()**   |We create the capture object|
 |**cv2.createBackgroundSubtractorMOG2()** | Object Detector (background subtractor through mask)|
 |**object_detector.apply()**| Apply object detector both to frame and roi.|
@@ -33,8 +33,16 @@ Object detection and tracking has numerous applications in computer vision, thus
 |**cv2.boundingRect(),cv2.rectangle()**|Draw rectangle based on contour.|
 |**cv2.drawContours()**    | Draw contours.|
 |**cv2.threshold(mask, colour1, colour2,cv2.THRESH_BINARY)**    | Apply threshold to mask.colour1 & colour 2 range 0-255 BGR.|
-|*Object Tracking*||
-|```from object_tracker import *```    | Import tracker so we can load EuclideanDistTracker function.|
+|*_Object Tracking_*||
+|object_tracker.py           | Tracker class|
+|```from object_tracker import *```    | Import tracker so we can load EuclideanDistTracker class.|
+|**tracker = EuclideanDistTracker()**    | Create object tracker.|
+|**tracker.update(detections)**    | Tracker update.|
+|**detections = []**    | Empty list to store object coordinates (x, y, w, h).|
+|**cv2.putText()**    | Add text.|
+|**cv2.rectangle()**    | Add rectangle.|
+
+
 
 
 
