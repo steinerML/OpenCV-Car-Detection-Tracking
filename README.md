@@ -27,7 +27,7 @@ Object detection and tracking has numerous applications in computer vision, thus
 |**cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)**     |Extract coordinates from mask.|
 |**cv2.drawContours()**    | Draw contours.|
 |**cv2.contourArea()**|Calculate Area.|
-|**roi = frame[(]**|Extract region of intrest (ROI)|
+|**roi = frame[x1 : x2, y1 : y2]**|Extract region of intrest (ROI)|
 |**cv2.**|C........|
 
 ## Test Image used: 
