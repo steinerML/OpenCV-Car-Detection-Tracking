@@ -20,8 +20,8 @@ Object detection and tracking has numerous applications in computer vision, thus
 
 | Function            |Action                                                                        |
 |:--------------------|------------------------------------------------------------------------------|
-|project.py           | Main app|
 |*_Object Detection_*||
+|project.py           | Main app|
 |**cv2.VideoCapture()**   |We create the capture object|
 |**cv2.createBackgroundSubtractorMOG2()** | Object Detector (background subtractor through mask)|
 |**object_detector.apply()**| Apply object detector both to frame and roi.|
@@ -98,8 +98,11 @@ roi = frame[340:720,500:800]
 object_detector.apply(roi)
 ```
 ```python
-#Object tracking 
+#Apply the mask to frame
+object_detector.apply(frame)
 ```
-```python.
+```python
+#Extract coordinates from contours
+contours, _ = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+```
 
-```
