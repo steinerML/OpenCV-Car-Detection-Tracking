@@ -38,7 +38,7 @@ Object detection and tracking has numerous applications in computer vision, thus
 |```from object_tracker import *```    | Import tracker so we can load EuclideanDistTracker class.|
 |**tracker = EuclideanDistTracker()**    | Create object tracker.|
 |**tracker.update(detections)**    | Tracker update.|
-|**detections = []**    | Empty list to store object coordinates (x, y, w, h).|
+|**detections = [ ]**    | Empty list to store object coordinates (x, y, w, h).|
 |**cv2.putText()**    | Add text.|
 |**cv2.rectangle()**    | Add rectangle.|
 
@@ -103,7 +103,7 @@ object_detector.apply(frame)
 ```
 ```python
 #Extract coordinates from contours
-contours, _ = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+contours, _ = cv2.Contours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 ```
 ```python
 #Calculate area of contours
