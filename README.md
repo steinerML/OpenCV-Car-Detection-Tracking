@@ -11,21 +11,22 @@ These are - in a nutshell - the main bullet points that have been approached:
 + **Creation of ROI (Region of Interest)**
 + **Apply Mask to ROI**
 + **Detect Objects in ROI**
-+ **Inverted Threshold to Zero**
++ **Apply Tracker**
 
 ![Source Image Sequence](general.gif)
 
 ## Contents :
 Object detection and tracking has numerous applications in computer vision, thus I wanted to summarize the main challenges we face when approaching a detection and tracking app in the following table. As we give solutions to challenges via built-in functions, I have only included the main functions used and a brief description of what each one does.
 
-| Function        |Action                                                                        |
-|----------------:|------------------------------------------------------------------------------|
-|cv2.threshold()   |We apply the threshold.|
-|**cv2.THRESH_BINARY** | Binary Thresholding|
-|**cv2.THRESH_BINARY_INV**| Inverse-Binary Thresholding|
-|**cv2.THRESH_TRUNC**       |Truncate Thresholding|
-|**cv2.THRESH_TOZERO** | Threshold to Zero|
-|**cv2.THRESH_TOZERO_INV**|Inverted Threshold to Zero|
+| Function            |Action                                                                        |
+|--------------------:|------------------------------------------------------------------------------|
+|project.py           | Main app|
+|**cv2.VideoCapture()**   |We create the capture object|
+|**cv2.createBackgroundSubtractorMOG2()** | Object Detector (background subtractor through mask)|
+|**object_detector.apply()**| Apply object detector both to frame and roi.|
+|**cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)**     |Extract coordinates from mask.|
+|**cv2.THRESH_TOZERO**    | Draw contours.|
+|**cv2.THRESH_TOZERO_INV**|Calculate Area.|
 
 ## Test Image used: 
 I have used traffic_algo_github.mp4 that can be found in the repository.
