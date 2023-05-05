@@ -19,16 +19,26 @@ These are - in a nutshell - the main bullet points that have been approached:
 Object detection and tracking has numerous applications in computer vision, thus I wanted to summarize the main challenges we face when approaching a detection and tracking app in the following table. As we give solutions to challenges via built-in functions, I have only included the main functions used and a brief description of what each one does.
 
 | Function            |Action                                                                        |
-|--------------------:|------------------------------------------------------------------------------|
+|:--------------------|------------------------------------------------------------------------------|
 |project.py           | Main app|
+|*Object Detection*||
 |**cv2.VideoCapture()**   |We create the capture object|
 |**cv2.createBackgroundSubtractorMOG2()** | Object Detector (background subtractor through mask)|
 |**object_detector.apply()**| Apply object detector both to frame and roi.|
-|**cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)**     |Extract coordinates from mask.|
+|**cv2.findContours()**     |Extract coordinates from mask.|
 |**cv2.drawContours()**    | Draw contours.|
 |**cv2.contourArea()**|Calculate Area.|
 |**roi = frame[x1 : x2, y1 : y2]**|Extract region of intrest (ROI)|
-|**cv2.**|C........|
+|**cv2.createBackgroundSubtractorMOG2(history,varThreshold)**   |Improve Detection via history & varThreshold.|
+|**cv2.boundingRect(),cv2.rectangle()**|Draw rectangle based on contour.|
+|**cv2.drawContours()**    | Draw contours.|
+|**cv2.threshold(mask, colour1, colour2,cv2.THRESH_BINARY)**    | Apply threshold to mask.colour1 & colour 2 range 0-255 BGR.|
+|*Object Tracking*||
+|```from object_tracker import *```    | Import tracker so we can load EuclideanDistTracker function.|
+
+
+
+
 
 ## Test Image used: 
 I have used traffic_algo_github.mp4 that can be found in the repository.
