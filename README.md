@@ -105,4 +105,63 @@ object_detector.apply(frame)
 #Extract coordinates from contours
 contours, _ = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
 ```
+```python
+#Calculate area of contours
+area = cv2.contourArea(cnt)
+```
+```python
+#Define Region of Interest (ROI)
+roi = frame[340:720,500:800]
+```
+```python
+#Apply mask to ROI
+mask = object_detector.apply(roi)
+```
+```python
+#Improved detection via parameters!
+object_detector = cv2.createBackgroundSubtractorMOG2(history=100, varThreshold=80)
+```
+```python
+#Draw rectangle based on contours
+x,y,w,h = cv2.boundingRect(cnt)
+```
+```python
+#Find contours
+contours, _ = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+```
+```python
+#Apply threshold to mask
+ _, mask = cv2.threshold(mask, 254,255,cv2.THRESH_BINARY)
+```
+```python
+#Create object tracker
+tracker = EuclideanDistTracker()
+```
+```python
+#Define empty list for object detection coordinates.
+detections = []
+```
+```python
+#Append coordinates to list
+detections.append([x,y,w,h])
+```
+```python
+#Update detections with box id
+box_id = tracker.update(detections)
+```
+```python
+#Add text (id number)
+cv2.putText(roi,str(id), (x,y - 15),cv2.FONT_HERSHEY_COMPLEX, 0.5,(0,0,255),1)
+```
+```python
+#Draw rectangle
+cv2.rectangle(roi,(x,y),(x + w, y + h), (0,255,0), 3)
+```
+```python
+#Print all windows (Source, Mask, ROI)
+cv2.imshow("Frame", frame)
+cv2.imshow("Mask", mask)
+cv2.imshow("ROI", roi)
+```
+
 
