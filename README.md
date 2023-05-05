@@ -11,7 +11,7 @@ These are - in a nutshell - the main bullet points that have been approached:
 + **Creation of ROI (Region of Interest)**
 + **Apply Mask to ROI**
 + **Detect Objects in ROI**
-+ **Apply Tracker**
++ **Apply Tracker (object_tracker.py)**
 
 ![Source Image Sequence](general.gif)
 
